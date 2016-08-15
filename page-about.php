@@ -20,14 +20,11 @@ Template name: About Us
                     <!-- BEGIN LEFT-SIDEBAR -->
                     <div class="span3 sidebar" id="left-sidebar">
                         <!-- LEFT-SIDEBAR: SIDEBAR NAVIGATION -->
-                        <div class="side-nav sidebar-block left-side-nav">
+                        <div class="side-nav sidebar-block left-side-nav">                            
                             <br>
-                            <ul>
-                                <li class="active"><a href="about_us.html">About Us</a><div class="side-tick left-side-tick"></div></li>
-
-                                <li><a href="about_us_team.html">Our Team</a><div class="side-tick left-side-tick"></div></li>
-                                <li><a href="about_us_contact.html">Contact Us</a><div class="side-tick left-side-tick"></div></li>
-                            </ul>
+                            <div class="widget-wrap">
+                                <?php dynamic_sidebar( 'about' ); ?>
+                            </div>
                         </div>                                
                     </div>                           
                     <!-- END LEFT-SIDEBAR -->

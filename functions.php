@@ -1,9 +1,8 @@
 <?php
 
 add_theme_support( 'post-thumbnails' ); // this allows you to set a featured image
-require_once('wp_bootstrap_navwalker.php'); // Register Custom Navigation Walker
+add_theme_support( 'menus' ); // This is to set the custom and dynamic menus
 
-//add_theme_support( 'menus' ); // This is to set the custom and dynamic menus
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'NextGen' ),
 ) );

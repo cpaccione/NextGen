@@ -38,6 +38,8 @@
                         
                             <?php wp_nav_menu( array(
                                     'menu' => 'primary',
+                                    'theme_location' => 'primary',
+                                    'depth' => 2,
                                     'container' => 'ul',
                                     'menu_class' => 'blue nav',
                                     'menu_id' => 'css3-menu',
