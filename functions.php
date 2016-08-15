@@ -60,5 +60,23 @@ function nextGen_js() {
 
 add_action( 'wp_enqueue_scripts', 'nextGen_js' );
 
+function create_widget($name, $id, $description) {
+
+	register_sidebar(array(
+		'name' => __( $name ),
+		'id' => $id,
+		'description' => __( $description ),
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	));
+
+}
+
+create_widget( 'About Us Sidebar', 'about', 'Displays in the About Us sidebar' );
+create_widget( 'Page Sidebar', 'page', 'Displays on the side of the pages with a sidebar' );
+create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section' );
+
 
 ?>
