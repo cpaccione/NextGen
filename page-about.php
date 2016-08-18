@@ -37,15 +37,13 @@ Template name: About Us
                             <br>
                                 <h2>About Us</h2>
                                 <br>
-                                <img src="images/building.jpg">
+                                <img src="<?php bloginfo('template_directory'); ?>/images/building.jpg" alt="NextGen Corporate Headquarters">
                                 <p class="experience"><em>Our new corporate headquarters in Warminster, PA</em></p><br>
                                 <p>Established in 2012, NextGen LifeLabs is focused on providing specialized cutting edge equipment, services and support for the modern ART laboratory. Our world class support and services are matched by our line of ART laboratory products.<br><br>
 
                                 With a combined 20 years experience, we offer skilled installation and service support for a wide range of equipment as well as laboratory planning, expansion and relocation consultation.</p>
                                 <br><br>
                             </div>
-                               
-
 
                         </div>
                     </div>

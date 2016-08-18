@@ -227,19 +227,19 @@
         display: block;
     }
     .attention-sidestick {
-        background: url("../img/sticker_sidebar_yellow.png") no-repeat scroll 0 0 transparent;
+        background: url("../images/sticker_sidebar_yellow.png") no-repeat scroll 0 0 transparent;
     }
     .white-sidestick {
-        background: url("../img/sticker_sidebar_white.png") no-repeat scroll 0 0 transparent;
+        background: url("../images/sticker_sidebar_white.png") no-repeat scroll 0 0 transparent;
     }
     .alert-sidestick {
-        background: url("../img/sticker_sidebar_red.png") no-repeat scroll 0 0 transparent;
+        background: url("../images/sticker_sidebar_red.png") no-repeat scroll 0 0 transparent;
     }
     .success-sidestick {
-        background: url("../img/sticker_sidebar_green.png") no-repeat scroll 0 0 transparent;
+        background: url("../images/sticker_sidebar_green.png") no-repeat scroll 0 0 transparent;
     }
     .note-sidestick {
-        background: url("../img/sticker_sidebar_blue.png") no-repeat scroll 0 0 transparent;
+        background: url("../images/sticker_sidebar_blue.png") no-repeat scroll 0 0 transparent;
     }
     .sidebar-stick {
         height: 187px;
@@ -1577,9 +1577,10 @@ ul.icons {
 }
 .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
     box-shadow: none;
+    background-color: transparent;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-    background-color: #ffffff;    
+    background-color: transparent;
 }
 .navbar .in .nav li.dropdown.open > .dropdown-toggle, .navbar .in .nav li.dropdown.active > .dropdown-toggle, .navbar .in .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: #333333;
@@ -2487,7 +2488,7 @@ div.alert {
     color: #666666;
 }
 .accordion .accordion-toggle, .toggle-box a {
-    background: url("../img/collapse_btn.png") no-repeat scroll left -98px transparent;
+    background: url("../images/collapse_btn.png") no-repeat scroll left -98px transparent;
     color: #3d91cf;
     display: block;
     font-size: 16px;
@@ -2496,7 +2497,7 @@ div.alert {
     padding: 10px 20px 10px 40px;
 }
 .accordion a.collapsed, .toggle-box .collapsed {
-    background: url("../img/collapse_btn.png") no-repeat scroll left 10px transparent;
+    background: url("../images/collapse_btn.png") no-repeat scroll left 10px transparent;
 }
 .accordion-heading, .tbox-heading {
     padding-left: 20px;
@@ -2507,7 +2508,7 @@ div.alert {
 }
 .dif-table p {
     padding: 6px 0;
-    font-family: 'Raleway',Arial,sans-serif;
+    font-family: 'Raleway', Arial, sans-serif;
     text-align: center;
 }
 .dif-table .span2, .dif-table .span3 {
@@ -3382,7 +3383,7 @@ background-image: -webkit-gradient(
     width: 230px;
     float: left;
     margin-left: 0;
-    margin:0 0 25px 0px;    
+    margin:0 0 25px 0px;
 }
 .history .item .dark-date-baloon {
     width: 230px;        
@@ -3555,11 +3556,6 @@ h4 {
     color: #2773AE;
     margin-bottom: 4px;
 }
-
-
-
-
-
 
 /*end*/
 
