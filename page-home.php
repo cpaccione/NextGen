@@ -34,7 +34,7 @@ Template Name: Home
                                 </div>
 
                                 <div class="caption sfr carousel-caption" data-x="460" data-y="235" data-speed="1000" data-start="500" data-easing="easeOutBack" style="background: none;">
-                                    <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Incubators</p>
+                                    <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="">  Incubators</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  HD video products</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Heated work surfaces</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Alarm monitoring</p>

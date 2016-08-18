@@ -2487,6 +2487,7 @@ div.alert {
     border: none;
     color: #666666;
 }
+
 .accordion .accordion-toggle, .toggle-box a {
     background: url("../images/collapse_btn.png") no-repeat scroll left -98px transparent;
     color: #3d91cf;
@@ -2496,6 +2497,7 @@ div.alert {
     line-height: 25px;
     padding: 10px 20px 10px 40px;
 }
+
 .accordion a.collapsed, .toggle-box .collapsed {
     background: url("../images/collapse_btn.png") no-repeat scroll left 10px transparent;
 }

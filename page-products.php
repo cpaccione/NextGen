@@ -34,40 +34,48 @@ Template name: Products
                                 </div>                              
                             </div>
 
+                            <div class="span9 main-column two-columns-left">
 
                             <?php if( have_rows('accordion') ): ?>
-                                <?php while( have_rows('accordion') ): the_row(); ?>
+                                <?php while( have_rows('accordion') ): the_row();
 
-                            <div class="span9 main-column two-columns-left">
-                                <h2 class="faq-title"><?php the_sub_field('section_title'); ?></h2>
-                                    <div id="accordion2" class="accordion">
+                                $name = get_sub_field('section_name');
 
-                                <?php if( have_rows('product') ): ?>
-                                    <?php while( have_rows('product') ): the_row(); ?>
+                                ?>
 
+
+
+                                        <?php if( get_sub_field( 'section_title') ): ?>
+                                            <h2 class="faq-title"><?php the_sub_field('section_title'); ?></h2>
+                                        <?php endif; ?>
+
+                                        <div id="<?php echo $name; ?>" class="accordion">
+
+                                            <?php if( have_rows('product') ): ?>
+                                                <?php while( have_rows('product') ): the_row(); ?>
+
+                                                    <div class="accordion-group">
+                                                        <div class="accordion-heading">
+                                                            <a href="#<?php the_sub_field('accordion_name'); ?>" data-parent="#<?php echo $name; ?>" data-toggle="collapse" class="accordion-toggle collapsed">
+                                                                <?php the_sub_field('product_title'); ?>
+                                                            </a>
+                                                        </div>
+                                                        <div class="accordion-body collapse" id="<?php the_sub_field('accordion_name'); ?>" style="height: 0px;">
+                                                            <div class="accordion-inner">
+                                                                <?php the_sub_field('product_editor'); ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
                                 
-
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a href="#<?php the_sub_field('accordion_name'); ?>" data-parent="#accordion2" data-toggle="collapse" class="accordion-toggle collapsed">
-                                                <?php the_sub_field('product_title'); ?>
-                                            </a>
                                         </div>
-                                        <div class="accordion-body collapse" id="<?php the_sub_field('accordion_name'); ?>" style="height: 0px;">
-                                            <div class="accordion-inner">
-                                                <?php the_sub_field('product_editor'); ?>
-                                            </div>
-                                        </div>
-                                    </div>  
-
-                    
-                                        <?php endwhile; ?>
-                                    <?php endif; ?>
-                                </div>
-                            </div> <!-- end span9 -->
-                            
+                                    
                                 <?php endwhile; ?>
                             <?php endif; ?>
+
+                            </div> <!-- end span9 -->
 
                     </div>
                 </div>
