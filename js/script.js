@@ -1,7 +1,6 @@
 jQuery(document).ready(function($) {
 
-
-                            
+                   
 /**                         
  * Bootstrap: Sleek, intuitive, and powerful front-end framework
  * docs: http://twitter.github.com/bootstrap/

@@ -30,7 +30,7 @@ Template name: Products
                             <div id="left-sidebar" class="span3 sidebar left-box-height">     
                                 <br>                          
                                 <div class="sidebar-baloon sidebar-grey-box">
-                                    <p>Please contact us for custom applications or products not shown.</p>
+                                    <p><?php the_field('left_sidebar'); ?></p>
                                 </div>                              
                             </div>
 

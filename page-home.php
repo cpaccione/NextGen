@@ -203,67 +203,65 @@ Template Name: Home
                 <div class="row show-grid features-block mini-blocks">
                     <div class="span4 block1">
                         <div class="mini-wrapper">
-                        <h2>Latest News</h2>
-                        <ul class="soft-updates">
-                            <li>
-                                <div class="date-img">
-                                    <span class="top-date">MAY</span>
-                                    <span class="bottom-date">30</span>
-                                </div>
-                                <p><strong>May 30th, 2016</strong><br>NextGen LifeLabs is excited to announce that we are now authorized distributors for Eppendorf. Please contract us for more information.</p>
 
-                            </li> 
+                        <h2><?php the_field('news_title'); ?></h2>
 
-                            <li>
-                                <div class="date-img">
-                                    <span class="top-date">OCT</span>
-                                    <span class="bottom-date">1</span>
-                                </div>
-                                <p><strong>October 1st, 2015</strong><br>Visit us at <a href="https://www.asrm.org/ASRM2015/"><b>ASRM:</b></a><br>Baltimore - Oct 17th-21st<br>Booth #425</p>
+                            <ul class="soft-updates">
+                                <?php if( have_rows('news') ): ?>
+                                    <?php while( have_rows('news') ): the_row();
 
-                            </li>
+                                    //vars
+                                    $month = get_sub_field('month');
+                                    $day = get_sub_field('day');
+                                    $editor = get_sub_field('editor');
 
-                            <li>
-                                <div class="date-img">
-                                    <span class="top-date">MAR</span>
-                                    <span class="bottom-date">13</span>
-                                </div>
-                                <p><strong>March 13th, 2015</strong><br><a href="http://www.ireachcontent.com/news-releases/medtech-for-solutions-partners-with-nextgen-lifelabs-288533531.html"><b>Press Release</b></a>. MedTech For Solutions and its Laboratory Solutions Division announced today that it has partnered with NextGen LifeLabs</p>
 
-                            </li>
-                                                      
-                        </ul>
+                                    ?>
+
+                                    <li>
+                                        <div class="date-img">
+                                            <span class="top-date"><?php echo $month; ?></span>
+                                            <span class="bottom-date"><?php echo $day; ?></span>
+                                        </div>
+                                        <?php echo $editor; ?>
+                                    </li>
+
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                                  
+                            </ul>
+
                         </div>
                     </div>
+
                     <div class="span4 block2">
                         <div class="mini-wrapper">
-                        <h2>Latest Press Release</h2>
-                        <ul>
-                            <li>
-                                <strong>May 25th, 2016: </strong>
-                                <p>NextGen LifeLabs is excited to announce that we are now authorized distributors for <a href="https://www.eppendorf.com/US-en/">Eppendorf</a>. Please <a href="mailto:info@nextgenlifelabs.com?Subject=Information%20Request">contact us</a> for more information. <br><br><a href="https://www.eppendorf.com/US-en/">Eppendorf</a> is a leading life science company that develops and sells instruments, consumables and services for liquid, sample, and cell handling in laboratories worldwide. Their broad product range will expand NextGen into new and exciting areas of the market. </p>
-                            </li>
-
-                        </ul>
+                            <h2><?php the_field('press_release_title'); ?></h2>
+                            <ul>
+                                <li><?php the_field('press_release_editor'); ?></li>
+                            </ul>
                         </div>
                     </div>
+
                     <div class="span4 block3">
                         <div class="mini-wrapper">
-                        <h2>A Few Of Our Brands</h2>
+                        <h2><?php the_field('brand_title'); ?></h2>
                         <ul class="mini-clients">
-                            <li>
-                                <a href="https://www.eppendorf.com/US-en/" target="_blank"><img style="margin-left:15px" src="<?php bloginfo('template_directory'); ?>/images/client_004.png" alt=""></a>
-                            </li>
+                            <?php if ( have_rows('brands') ): ?>
+                                <?php while ( have_rows('brands') ): the_row();
+	                                
+	                                $link = get_sub_field('link');
+	                                $brandImage = get_sub_field('brand_image');
+	                                
+                                ?>
 
-                            <li>
-                                <a href="http://www.sensaphone.com/" target="_blank"><img style="margin-left:15px" src="<?php bloginfo('template_directory'); ?>/images/client_001.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="http://www.mtg-de.com/products/ivf-icsi.html" target="_blank"><img style="margin-left:15px" src="<?php bloginfo('template_directory'); ?>/images/client_003.png" alt=""></a>
-                            </li>
-                            <li>
-                                <a href="http://www.oko-lab.com/" target="_blank"><img style="margin-left:10px" src="<?php bloginfo('template_directory'); ?>/images/client_002.png" alt=""></a>
-                            </li>
+                                    <li>
+                                        <a href="<?php echo $link; ?>" target="_blank"><img style="margin-left: 15px;" src="<?php echo $brandImage['url']; ?>" alt="<?php $brandImage['alt']; ?>"></a>
+                                    </li>
+
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                            
                         </ul>
                         </div>
                     </div>

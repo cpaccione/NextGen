@@ -3,6 +3,14 @@
 add_theme_support( 'post-thumbnails' ); // this allows you to set a featured image
 add_theme_support( 'menus' ); // This is to set the custom and dynamic menus
 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+     if( in_array('current-menu-item', $classes) ){
+             $classes[] = 'active ';
+     }
+     return $classes;
+}
+
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'NextGen' ),
 ) );

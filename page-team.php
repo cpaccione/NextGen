@@ -34,76 +34,42 @@ Template name: Team
 		                <div class="row show-grid team-member">
 			                <br>
 			                <div class="span9">
-				                <h2>Our Team</h2>
+				                <?php the_title('<h2>', '</h2>'); ?>
 			                </div>
 		                </div>
-
-		                <div class="row show-grid team-member">
-			                <div class="span3 photo">
-				                <div class="bordered-img"><img alt="" src="<?php bloginfo('template_directory'); ?>/images/team-member-steve.jpg"></div>
-				                <ul>
-					                <li><span>215-870-3433</span><i class="icon-phone"></i></li>
-					                <li><span><a href="mailto:steve@nextgenlifelabs.com">steve@nextgenlifelabs.com</a></span><i class="icon-envelope"></i></li>
-				                </ul>
-			                </div>
-			                <div class="span6">
-				                <h2>Steve Strzempek</h2>
-				                <h4>Technical Sales and Marketing Director<br>Eastern U.S. Sales</h4>
-				                <p class="experience"><em></em></p>
-			                </div>
-		                </div>
-
-
-		                <div class="row show-grid team-member">
-			                <div class="span3 photo">
-				                <div class="bordered-img"><img alt="" src="<?php bloginfo('template_directory'); ?>/images/team-member-david.jpg"></div>
-				                <ul>
-					                <li><span>215-410-1987</span><i class="icon-phone"></i></li>
-					                <li><span><a href="mailto:david@nextgenlifelabs.com">david@nextgenlifelabs.com</a></span><i class="icon-envelope"></i></li>
-				                </ul>
-			                </div>
-			                <div class="span6">
-				                <h2>David Hopely</h2>
-				                <h4>Engineering and Service Director<br>Western U.S. Sales</h4>
-				                <p class="experience"><em></em></p>
-
-			                </div>
-		                </div>
-
-
-		                <div class="row show-grid team-member">
-			                <div class="span3 photo">
-				                <div class="bordered-img"><img alt="" src="<?php bloginfo('template_directory'); ?>/images/team-member-ian.jpg"></div>
-				                <ul>
-					                <li><span>856-495-7863</span><i class="icon-phone"></i></li>
-					                <li><span><a href="mailto:ian@nextgenlifelabs.com">ian@nextgenlifelabs.com</a></span><i class="icon-envelope"></i></li>
-				                </ul>
-			                </div>
-			                <div class="span6">
-				                <h2>Ian Tuch</h2>
-				                <h4>Project Manager</h4>
-				                <p class="experience"><em></em></p>
-
-			                </div>
-		                </div>
-
-		                <div class="row show-grid team-member">
-			                <div class="span3 photo">
-				                <div class="bordered-img"><img alt="" src="<?php bloginfo('template_directory'); ?>/images/team-member-colleen.jpg"></div>
-				                <ul>
-					                <li><span>215-672-4838</span><i class="icon-phone"></i></li>
-					                <li><span><a href="mailto:colleen@nextgenlifelabs.com">colleen@nextgenlifelabs.com</a></span><i class="icon-envelope"></i></li>
-				                </ul>
-			                </div>
-			                <div class="span6">
-				                <h2>Colleen Strzempek</h2>
-				                <h4>Office Manager</h4>
-				                <p class="experience"><em></em></p>
-
-			                </div>
-		                </div>
-
-
+		                
+		                <?php if( have_rows('team') ): ?>
+		                	<?php while( have_rows('team') ): the_row(); 
+			                	
+			                	//vars
+			                	$image = get_sub_field('profile_photo');
+			                	$name = get_sub_field('name');
+			                	$title = get_sub_field('title_and_location');
+			                	$phone = get_sub_field('phone_number');
+			                	$email = get_sub_field('email_address');
+			                				                 				   
+		                	?>
+		                	
+				                <div class="row show-grid team-member">
+					                <div class="span3 photo">
+						                <div class="bordered-img"><img alt="<?php echo $image['alt']; ?>" src="<?php echo $image['url']; ?>"></div>
+						                <ul>
+							                <li><span><?php echo $phone; ?></span><i class="icon-phone"></i></li>
+							                <li><span><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></span><i class="icon-envelope"></i></li>
+						                </ul>
+					                </div>
+					                <div class="span6">
+						                <h2><?php echo $image['title'] ?></h2>
+						                <h4><?php echo $title; ?></h4>
+						                <p class="experience"><em></em></p>
+					                </div>
+				                </div>
+		                	
+		                	
+		                	<?php endwhile; ?>
+	                	<?php endif; ?>
+		                
+		                
 	                </div>
                 </div>
 	            <!-- END MAIN/PRIMARY CONTENT AREA -->

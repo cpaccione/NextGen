@@ -20,6 +20,14 @@
     height: 300px;
 }
 
+@media (max-width: 767px) {
+	
+	.about-us-spacer-300 {
+		height: 0px
+	}
+	
+}
+
 .services-top-spacer {
     height: 30px;
 }
