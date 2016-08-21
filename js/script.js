@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+	
+	$('.menu-footer-menu-container ul').addClass('footer-navigate');
 
                    
 /**                         

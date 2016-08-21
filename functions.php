@@ -20,6 +20,7 @@ require_once('wp_bootstrap_navwalker.php'); // Register Custom Navigation Walker
 function nextGen_styles() {
 	wp_enqueue_style( 'fonts_opensans', 'http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic');
 	wp_enqueue_style( 'fonts_raleway', 'http://fonts.googleapis.com/css?family=Raleway:400,900,500,600,700,800');
+	wp_enqueue_style( 'font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' );
 	wp_enqueue_style( 'rs_plugin_settings', get_template_directory_uri() . '/rs-plugin/css/settings.css' );
 	wp_enqueue_style( 'rs_responsive', get_template_directory_uri() . '/css/rs-responsive.css' );
 	wp_enqueue_style( 'bootstrap_css', get_template_directory_uri() . '/css/bootstrap.css' );
@@ -75,7 +76,7 @@ function create_widget($name, $id, $description) {
 		'description' => __( $description ),
 		'before_widget' => '<div class="widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4>',
+		'before_title' => '<h4 class="center-title">',
 		'after_title' => '</h4>'
 	));
 
@@ -84,6 +85,23 @@ function create_widget($name, $id, $description) {
 create_widget( 'About Us Sidebar', 'about', 'Displays in the About Us sidebar' );
 create_widget( 'Page Sidebar', 'page', 'Displays on the side of the pages with a sidebar' );
 create_widget( 'Blog Sidebar', 'blog', 'Displays on the side of pages in the blog section' );
+
+function footer_widget($name, $id, $description) {
+	
+	register_sidebar(array(
+		'name' => __( $name ),
+		'id' => $id,
+		'description' => __( $description ),
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="center-title">',
+		'after_title' => '</h4>'
+	));
+}
+
+footer_widget( 'Footer first column', 'footer-first', 'Displays in the first footer column' );
+footer_widget( 'Footer second column', 'footer-second', 'Displays in the second footer column' );
+footer_widget( 'Footer third column', 'footer-third', 'Displays in the third footer column' );
 
 
 ?>
