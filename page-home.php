@@ -45,12 +45,17 @@ Template Name: Home
                                 </div>
 
                                 <div class="caption sfr carousel-caption" data-x="460" data-y="235" data-speed="1000" data-start="500" data-easing="easeOutBack" style="background: none;">
-                                    <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="">  Incubators</p>
+                                    <?php if( have_rows('bulleted_list') ): ?>
+                                        <?php while( have_rows('bulleted_list') ): the_row(); ?>
+                                        <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="NextGen Lifelabs">  <?php the_sub_field('list_item'); ?></p>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+<!--                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="">  Incubators</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  HD video products</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Heated work surfaces</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Alarm monitoring</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Process gas control</p>
-                                    <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Custom products</p><br>
+                                    <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Custom products</p><br> -->
                                 </div>         
 
                                 <div class="caption sfr carousel-caption" data-x="460" data-y="345" data-speed="1000" data-start="500" data-easing="easeOutBack" style="background: none;">

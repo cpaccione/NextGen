@@ -1,5 +1,11 @@
 /*Custom CSS*/
 
+/* CSS added by cpaccione */
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
 
 /*Custom Landscapes Start*/
 
