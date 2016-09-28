@@ -15,7 +15,7 @@ Template Name: Home
                     <div class="banner">
                         <ul>
                             <?php if( have_rows('slider') ): ?>
-                                <?php while( have_rows('slider') ): the_row(); 
+                                <?php while( have_rows('slider') ): the_row();
 
                                 //vars
                                 $background = get_sub_field('background_image');
@@ -56,14 +56,14 @@ Template Name: Home
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Alarm monitoring</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Process gas control</p>
                                     <p class="medium"><img src="<?php bloginfo('template_directory'); ?>/images/slide2_bullet.png" alt="" />  Custom products</p><br> -->
-                                </div>         
+                                </div>
 
                                 <div class="caption sfr carousel-caption" data-x="460" data-y="345" data-speed="1000" data-start="500" data-easing="easeOutBack" style="background: none;">
-                                </div>   
+                                </div>
 
                                 <div class="caption sfr carousel-caption" data-x="490" data-y="345" data-speed="1000" data-start="500" data-easing="easeOutBack" style="background: none;">
                                 </div>
-                            </li> 
+                            </li>
 
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -72,12 +72,12 @@ Template Name: Home
                         <div class="tp-bannertimer"></div>
                     </div>
                 </div>
-	
+
             <!-- MAIN CONTENT AREA -->
     		<div class="main-wrapper">
         		<div class="main-content">
             		<div class="container">
-                
+
 
                 <div class="row show-grid features-block mini-blocks">
                     <div class="span4 block1">
@@ -107,7 +107,7 @@ Template Name: Home
 
                                     <?php endwhile; ?>
                                 <?php endif; ?>
-                                  
+
                             </ul>
 
                         </div>
@@ -128,19 +128,19 @@ Template Name: Home
                         <ul class="mini-clients">
                             <?php if ( have_rows('brands') ): ?>
                                 <?php while ( have_rows('brands') ): the_row();
-	                                
+
 	                                $link = get_sub_field('link');
 	                                $brandImage = get_sub_field('brand_image');
-	                                
+
                                 ?>
 
                                     <li>
-                                        <a href="<?php echo $link; ?>" target="_blank"><img style="margin-left: 15px;" src="<?php echo $brandImage['url']; ?>" alt="<?php $brandImage['alt']; ?>"></a>
+                                        <a href="<?php echo $link; ?>" target="_blank"><img style="margin-left: 15px;" src="<?php echo $brandImage['url']; ?>" alt="<?php echo $brandImage['alt']; ?>"></a>
                                     </li>
 
                                 <?php endwhile; ?>
                             <?php endif; ?>
-                            
+
                         </ul>
                         </div>
                     </div>
