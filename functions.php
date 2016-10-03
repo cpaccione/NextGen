@@ -30,6 +30,7 @@ function nextGen_styles() {
 	wp_enqueue_style( 'color_scheme_css', get_template_directory_uri() . '/css/color_scheme.css' );
 	wp_enqueue_style( 'flexslider_css', get_template_directory_uri() . '/css/flexslider.css' );
 	wp_enqueue_style( 'fancybox_css', get_template_directory_uri() . '/css/jquery.fancybox.css?v=2.1.0');
+	wp_enqueue_style( 'main_css', get_template_directory_uri() . '/style.css' );
 }
 
 add_action( 'wp_enqueue_scripts', 'nextGen_styles' );

@@ -30,7 +30,7 @@ Template Name: Home
                             <li class="slide2" data-transition="slotfade-horizontal"  data-masterspeed="300" data-slotamount="20">
                                 <img src="<?php echo $background['url']; ?>" alt="<?php echo $background['alt']; ?>">
                                 <div class="caption lfb carousel-caption" data-x="0" data-y="0" data-speed="1000" data-start="500" data-easing="easeOutBack" style="background: none;">
-                                    <img src="<?php echo $product['url']; ?>" alt="<?php echo $product['alt']; ?>">
+                                    <img class="img-responsive" src="<?php echo $product['url']; ?>" alt="<?php echo $product['alt']; ?>">
                                 </div>
                                 <div class="caption sft carousel-caption" data-x="475" data-y="0" data-speed="1000" data-start="500" data-easing="easeInBack" style="background: none; padding-left: 0;">
                                     <p class="large"><?php echo $fieldOne; ?></p>
