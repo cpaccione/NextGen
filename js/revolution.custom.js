@@ -6,10 +6,10 @@ jQuery(document).ready(function($) {
 		$.fn.css = $.fn.cssOriginal;
 
 	$('.banner').revolution({
-		delay:5000,
-		
+		delay: 10000,
+
 		startwidth:940,
-                startheight:400,
+		startheight:400,
 		thumbWidth:100,
 		thumbHeight:50,
 		thumbAmount:5,
@@ -28,4 +28,3 @@ jQuery(document).ready(function($) {
 		fullWidth:"off"
 	});
 });
-					
